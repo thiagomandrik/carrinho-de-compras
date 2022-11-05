@@ -1,0 +1,21 @@
+/* .cores{
+    --cabecalhoBgColor: #16425B;
+    --cabecalhoFontColor: #D9DCD6;
+    
+    --backgroundColor1:#D9DCD6;
+    --backgroundColor2: #3A7CA5;
+    --backgroundColor3: #16425B;
+    --fontColor: #16425B;
+
+
+    --rodapeBgColor: #16425B;
+    --rodapeFontColor: #D9DCD6;
+} */
+
+.cores{
+    --color1:#025E73;
+    --color2:#011F26;
+    --color3:#A5A692;
+    --color4:#BFB78F;
+    --color5:#F2A71B;
+}

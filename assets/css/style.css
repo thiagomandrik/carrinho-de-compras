@@ -1,0 +1,21 @@
+@import "./reset.css";
+@import "./normalize.css";
+@import "./cores.css";
+
+@import "./cabecalho.css";
+@import "./cabecalho/cabecalho-titulo.css";
+@import "./cabecalho/cabecalho-logo.css";
+
+@import "./produtos.css";
+@import "./produto/produto.css";
+@import "./produto/produto-circuloImagem.css";
+@import "./produto/produto-imagem.css";
+@import "./produto/produto-nome.css";
+@import "./produto/produto-tracoHorizontal.css";
+@import "./produto/produto-preco.css";
+@import "./produto/produto-ipi.css";
+@import "./produto/produto-quantidade.css";
+@import "./produto/produto-botoes.css";
+@import "./produto/produto-botao.css";
+
+

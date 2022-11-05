@@ -1,0 +1,6 @@
+.produto__preco{
+    font-size: 1.25rem;
+    color: var(--color3);
+    margin-top: 5px;
+    margin-bottom: 5px;
+}

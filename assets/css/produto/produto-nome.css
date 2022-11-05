@@ -1,0 +1,6 @@
+.produto__nome{
+    font-size: 1.5rem;
+    color: var(--color5);
+    font-weight: bold;
+    margin-top: 10px;
+}

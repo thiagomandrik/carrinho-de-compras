@@ -1,0 +1,22 @@
+.produtos{
+    background-color: var(--color3);
+    padding: 10rem 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    width: 100%;
+}
+
+@media screen and (min-width: 0){
+    .produtos{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 1000px){
+    .produtos{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}

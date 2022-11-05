@@ -1,0 +1,18 @@
+.cabecalho__titulo{
+    color: var(--color5);
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+@media screen and (min-width: 0){
+    .cabecalho__titulo{
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (min-width: 481px){
+    .cabecalho__titulo{
+        font-size: 2.5rem;
+    }
+}

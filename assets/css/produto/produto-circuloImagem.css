@@ -1,0 +1,16 @@
+.produto__circuloImagem{
+    background-color: var(--color2);
+    border-radius: 100%;
+}
+
+@media screen and (min-width: 0){
+    .produto__circuloImagem{
+        padding: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 481px){
+    .produto__circuloImagem{
+        padding: 2rem;
+    }
+}
