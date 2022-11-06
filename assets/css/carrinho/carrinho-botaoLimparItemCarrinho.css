@@ -1,4 +1,4 @@
-.carrinho__botaoLimparQuantidade{
+.carrinho__botaoLimparItemCarrinho{
     background-color: var(--color5);
     color: var(--color2);
     font-weight: bold;
@@ -8,7 +8,7 @@
     cursor: pointer;
 }
 
-.carrinho__botaoLimparQuantidade:hover{
+.carrinho__botaoLimparItemCarrinho:hover{
     background-color: var(--color6);
     transition-duration: 0.5s;
 }

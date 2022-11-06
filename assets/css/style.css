@@ -24,7 +24,12 @@
 @import "./carrinho/carrinho-conteudo.css";
 @import "./carrinho/carrinho-produtosNoCarrinho-vazio.css";
 @import "./carrinho/carrinho-tabelaProdutosNoCarrinho.css";
-@import "./carrinho/carrinho-limparQuantidade.css";
+@import "./carrinho/carrinho-botaoLimparItemCarrinho.css";
+
+@import "./carrinho/carrinho-total.css";
+@import "./carrinho/carrinho-totalAvisoDesconto.css";
+@import "./carrinho/carrinho-totais.css";
+@import "./carrinho/carrinho-botaoLimparCarrinho.css";
 
 @import "./rodape.css";
 @import "./rodape/rodape-texto.css";

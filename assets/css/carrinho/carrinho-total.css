@@ -1,0 +1,17 @@
+.carrinho__total{
+    background-color: var(--color2);
+    /* padding: 3rem; */
+    border-radius: 10px;
+}
+
+@media screen and (min-width: 0){
+    .carrinho__total{
+        margin-top: 10rem;
+    }
+}
+
+@media screen and (min-width: 481px){
+    .carrinho__total{
+        margin-top: 2rem;
+    }
+}

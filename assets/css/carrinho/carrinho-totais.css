@@ -1,0 +1,14 @@
+.carrinho__totais{
+    color: var(--color5);
+    font-size: 1rem;
+    margin: 1.5rem;
+}
+
+.totalPedido{
+    color: var(--color5);
+    font-size: 1.2rem;
+    margin: 2rem;
+    text-transform: uppercase;
+    font-weight: bolder;
+    text-shadow: 0 0 2px var(--color5);
+}

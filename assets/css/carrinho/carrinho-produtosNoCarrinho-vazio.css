@@ -1,18 +1,20 @@
 #carrinho__produtosNoCarrinho--vazio{
     color: var(--color3);
     font-weight: bold;
-    margin-top: 1rem;
     text-shadow: 0 0 3px var(--color3);
+    margin: 2rem;
 }
 
 @media screen and (min-width: 0){
     #carrinho__produtosNoCarrinho--vazio{
-        font-size: 1rem;
+        font-size: 1.4rem;
+        margin-top: 1rem;
     }
 }
 
 @media screen and (min-width: 481px){
     #carrinho__produtosNoCarrinho--vazio{
+        margin-top: 5rem;
         font-size: 2rem;
     }
 }
