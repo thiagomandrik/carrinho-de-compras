@@ -1,0 +1,19 @@
+.rodape__texto{
+    color: var(--color5);
+    text-shadow: 0 0 2px var(--color5);
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+
+@media screen and (min-width: 0){
+    .rodape__texto{
+        padding: 0;
+    }
+}
+
+@media screen and (min-width: 700px){
+    .rodape__texto{
+        margin-right: 2rem;
+    }
+    
+}

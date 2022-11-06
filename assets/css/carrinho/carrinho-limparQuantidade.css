@@ -1,0 +1,14 @@
+.carrinho__botaoLimparQuantidade{
+    background-color: var(--color5);
+    color: var(--color2);
+    font-weight: bold;
+    height: 2rem;
+    border-radius: 5px;
+    border-style: none;
+    cursor: pointer;
+}
+
+.carrinho__botaoLimparQuantidade:hover{
+    background-color: var(--color6);
+    transition-duration: 0.5s;
+}

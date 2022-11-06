@@ -1,0 +1,18 @@
+.carrinho__titulo{
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--color5);
+    text-shadow: 0 0 3px var(--color5);
+}
+
+@media screen and (min-width: 0){
+    .carrinho__titulo{
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (min-width: 481px){
+    .carrinho__titulo{
+        font-size: 1.5rem;
+    }
+}

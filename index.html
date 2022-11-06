@@ -26,8 +26,14 @@
             <hr class="produto__tracoHorizontal">
             <span class="produto__quantidade"></span>
             <div class="produto__botoes">
-                <button class="produto__botao subtrai" type="button">-</button>
-                <button class="produto__botao adiciona" type="button">+</button>
+                <div>
+                    <button class="produto__botao subtrai1" type="button">-</button>
+                    <button class="produto__botao adiciona1" type="button">+</button>
+                </div>
+                <div>
+                    <button class="produto__botao subtrai5" type="button">-5</button>
+                    <button class="produto__botao adiciona5" type="button">+5</button>
+                </div>
             </div>
         </div>
 
@@ -42,8 +48,14 @@
             <hr class="produto__tracoHorizontal">
             <span class="produto__quantidade"></span>
             <div class="produto__botoes">
-                <button class="produto__botao subtrai" type="button">-</button>
-                <button class="produto__botao adiciona" type="button">+</button>
+                <div>
+                    <button class="produto__botao subtrai1" type="button">-</button>
+                    <button class="produto__botao adiciona1" type="button">+</button>
+                </div>
+                <div>
+                    <button class="produto__botao subtrai5" type="button">-5</button>
+                    <button class="produto__botao adiciona5" type="button">+5</button>
+                </div>
             </div>
         </div>
 
@@ -58,15 +70,43 @@
             <hr class="produto__tracoHorizontal">
             <span class="produto__quantidade"></span>
             <div class="produto__botoes">
-                <button class="produto__botao subtrai" type="button">-</button>
-                <button class="produto__botao adiciona" type="button">+</button>
+                <div>
+                    <button class="produto__botao subtrai1" type="button">-</button>
+                    <button class="produto__botao adiciona1" type="button">+</button>
+                </div>
+                <div>
+                    <button class="produto__botao subtrai5" type="button">-5</button>
+                    <button class="produto__botao adiciona5" type="button">+5</button>
+                </div>
             </div>
         </div>
     </section>
-
-    <section>
-        
+    
+    <section class="carrinho">
+        <div>
+            <h1 class="carrinho__titulo">CARRINHO DE COMPRAS</h1>
+            <hr class="carrinho__tracoHorizontal">
+        </div>
+        <div class="carrinho__conteudo">
+            <div class="carrinho__produtosNoCarrinho">
+                <p id="carrinho__produtosNoCarrinho--vazio">Carrinho Vazio!</p>
+                <table id="carrinho__tabela" class="carrinho__tabelaProdutosNoCarrinho">
+                    <thead>
+                        <tr>
+                            <th>PRODUTO</th>
+                            <th>SUBTOTAL</th>
+                        </tr>
+                    </thead>
+                    <tbody id="carrinho__tabelaLinhas">
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </section>
+    
+    <footer class="rodape">
+        <p class="rodape__texto">Desenvolvido por Thiago Mandrik</p>
+    </footer>
 
     <script type="text/javascript" src="./assets/scripts/main.js"></script>
 </body>

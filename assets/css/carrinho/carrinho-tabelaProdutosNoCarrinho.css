@@ -1,0 +1,29 @@
+.carrinho__tabelaProdutosNoCarrinho{
+    margin-top: 1rem;
+    width: 100%;
+    height: 4rem;
+    display: none;
+}
+
+.carrinho__tabelaProdutosNoCarrinho th{
+    padding: 1rem 2rem 1rem 2rem;
+    vertical-align: middle;
+    font-weight: bold;
+    color: var(--color3);
+    background-color: var(--color2);
+    /* position: relative; */
+}
+
+.carrinho__tabelaProdutosNoCarrinho td{
+    /* padding-right: 2rem;
+    padding-left: 2rem; */
+    height: 3rem;
+    vertical-align: middle;
+    font-weight: bold;
+    color: var(--color3);
+    /* background-color: var(--color3); */
+}
+
+.carrinho__tabelaProdutosNoCarrinho tr{
+    margin-top: 10px;
+}

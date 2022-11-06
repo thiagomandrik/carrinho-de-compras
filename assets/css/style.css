@@ -18,4 +18,13 @@
 @import "./produto/produto-botoes.css";
 @import "./produto/produto-botao.css";
 
+@import "./carrinho.css";
+@import "./carrinho/carrinho-titulo.css";
+@import "./carrinho/carrinho-tracoHorizontal.css";
+@import "./carrinho/carrinho-conteudo.css";
+@import "./carrinho/carrinho-produtosNoCarrinho-vazio.css";
+@import "./carrinho/carrinho-tabelaProdutosNoCarrinho.css";
+@import "./carrinho/carrinho-limparQuantidade.css";
 
+@import "./rodape.css";
+@import "./rodape/rodape-texto.css";

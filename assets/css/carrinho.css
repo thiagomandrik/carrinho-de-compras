@@ -1,0 +1,8 @@
+.carrinho{
+    background-color: var(--color1);
+    text-align: center;
+    padding: 1.5rem;
+    padding-bottom:10rem;
+    /* height: 20rem; */
+    border-radius:15px 15px 0 0;
+    }

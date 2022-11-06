@@ -5,13 +5,13 @@
     font-weight: bold;
     font-size: 1.5rem;
     background-color: var(--color3);
-    color: var(--cabecalhoFontColor);
+    color: var(--color2);
     border: none;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .produto__botao:hover{
     background-color: var(--color4);
     transition-duration: 0.5s;
-    cursor: pointer;
 }

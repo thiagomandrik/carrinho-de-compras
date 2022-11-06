@@ -1,0 +1,22 @@
+.rodape{
+    background-color: var(--color2);
+    width: 100%;
+    position: absolute;
+    height: 50px;
+    /* border-radius:15px 15px 0 0; */
+}
+
+@media screen and (min-width: 0){
+    .rodape{
+        text-align: center;
+    }
+}
+
+
+@media screen and (min-width: 700px){
+    .rodape{
+        text-align: right;
+        margin-right: 1rem;
+    }
+    
+}
