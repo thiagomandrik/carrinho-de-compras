@@ -7,9 +7,9 @@ var listaProdutos = [
 
 // Definindo as listas e dicionarios que serao utilizados no totalizador do carrinho
 var totais = {"totalValorProdutos":0, "totalValorIPI":0, "totalDesconto":0, "totalValorPedido":0};
-var quantidadeTotalProdutos
+var quantidadeTotalProdutos;
 const listaIndicesTotais = ["totalValorProdutos", "totalValorIPI","totalDesconto", "totalValorPedido"];
-const listaTotais = ["Total dos produtos: ", "Total de Impostos: ","Total de desconto: ", "Total do pedido: "];
+const listaTotais = ["Total de produtos: ", "Total de Impostos: ","Total de desconto: ", "Total do pedido: "];
 
 //Funcao para formatar os precos em R$
 function formataPreco(preco){
@@ -18,7 +18,7 @@ function formataPreco(preco){
 	precoFormatado = precoFormatado.replace(".",",");
 	precoFormatado = "R$ " + precoFormatado;
 	return precoFormatado;
-}
+};
 
 //Funcao para formatar os percentuais de IPI
 function formataIPI(taxaIPI){
@@ -26,7 +26,7 @@ function formataIPI(taxaIPI){
     ipiFormatado = ipiFormatado.replace(".",",");
 	ipiFormatado = ipiFormatado + "%";
 	return ipiFormatado;
-}    
+}; 
 
 //Funcao para calcular o subtotal dos itens
 function subtotalItem(indiceProduto){
@@ -37,7 +37,7 @@ function subtotalItem(indiceProduto){
     listaProdutos[indiceProduto].valorTotalProduto = totalProdutos;
     listaProdutos[indiceProduto].valorTotalIPI = totalIPI;
     listaProdutos[indiceProduto].subtotal = subtotal;
-}
+};
 
 //Funcao para atualizar o carrinho de compras
 function atualizaCarrinho(indiceProduto){
@@ -73,13 +73,14 @@ function atualizaCarrinho(indiceProduto){
         document.getElementById("carrinho__produtosNoCarrinho--vazio").style.display = "inline-block";       
         document.getElementById("carrinho__tabela").style.display = "none";       
     }
-}
+    resetaPedido();
+};
 
 //Funcao para adicionar 1 item
 function adicionaQuantidade1(indiceProduto){
     var quantidade = listaProdutos[indiceProduto].quantidade += 1;
     atualizaCarrinho(indiceProduto, quantidade);
-}
+};
 
 //Funcao para subtrair 1 item
 function subtraiQuantidade1(indiceProduto){
@@ -89,13 +90,13 @@ function subtraiQuantidade1(indiceProduto){
     } else{
         //pass
     }
-}
+};
 
 //Funcao para adicionar 5 itens
 function adicionaQuantidade5(indiceProduto){
     var quantidade = listaProdutos[indiceProduto].quantidade += 5;
     atualizaCarrinho(indiceProduto, quantidade);
-}
+};
 
 //Funcao para subtrair 5 itens
 function subtraiQuantidade5(indiceProduto){
@@ -105,33 +106,59 @@ function subtraiQuantidade5(indiceProduto){
         listaProdutos[indiceProduto].quantidade = 0;
     }
     atualizaCarrinho(indiceProduto, quantidade);
-}
+};
 
 //Funcao para limpar um item do carrinho
 function limparItemCarrinho(indiceProduto){
-    var confirmaLimparItemCarrinho = confirm("Você tem certeza que deseja excluir o item?");
-    if(confirmaLimparItemCarrinho = true){
-        var quantidade = 0;
-        listaProdutos[indiceProduto].quantidade = 0;
-        atualizaCarrinho(indiceProduto, quantidade);
+    if(listaProdutos[indiceProduto].quantidade > 0){
+        var confirmaLimparItemCarrinho = confirm("Você tem certeza que deseja excluir o item?");
+        if(confirmaLimparItemCarrinho = true){
+            var quantidade = 0;
+            listaProdutos[indiceProduto].quantidade = 0;
+            atualizaCarrinho(indiceProduto, quantidade);
+        }else{
+            //pass
+        };
     }else{
         //pass
     };
-}
+};
 
 //Funcao para limpar todo o carrinho
 function limparCarrinho(){
-    var confirmaLimparCarrinho = confirm("Você tem certeza que deseja limpar o carrinho?");
-    if(confirmaLimparCarrinho = true){
+    if(quantidadeTotalProdutos > 0){
+        var confirmaLimparCarrinho = confirm("Você tem certeza que deseja limpar o carrinho?");
+        if(confirmaLimparCarrinho = true){
+            var quantidade = 0;
+            for(let contador = 0; contador < listaProdutos.length; contador++){
+                listaProdutos[contador].quantidade = 0;
+                atualizaCarrinho(contador, quantidade);
+            };
+        }else{
+            //pass
+        };
+    }else{
+        // pass
+    };
+};
+
+//Funcao para finalizar compra
+function finalizarPedido(){
+    if(quantidadeTotalProdutos > 0){
         var quantidade = 0;
         for(let contador = 0; contador < listaProdutos.length; contador++){
             listaProdutos[contador].quantidade = 0;
             atualizaCarrinho(contador, quantidade);
         };
+        document.getElementById("carrinho__confirmacaoPedido").style.display = "inline-block";
     }else{
         //pass
     };
-}
+};
+
+function resetaPedido(){
+    document.getElementById("carrinho__confirmacaoPedido").style.display = "none";
+};
 
 //Listas dos elementos da section produtos
 const listaElementosNomesDeProdutos = document.querySelectorAll('.produto__nome');
@@ -151,7 +178,7 @@ const listaElementosTotais = document.querySelectorAll(".carrinho__totais");
 for(let contador = 0; contador < listaProdutos.length; contador++){
     //Definicao dos elementos iniciais da pagina
     listaElementosNomesDeProdutos[contador].innerHTML = listaProdutos[contador].produto;
-    listaElementosPrecosDeProdutos[contador].innerHTML = `<b>Preço Un: </b>${formataPreco(listaProdutos[contador].preco)}`;
+    listaElementosPrecosDeProdutos[contador].innerHTML = `<b>Preço Unitário: </b>${formataPreco(listaProdutos[contador].preco)}`;
     listaElementosTaxaIpiDeProdutos[contador].innerHTML = `<b>Taxa IPI: </b>${formataIPI(listaProdutos[contador].taxaIPI)}`;
     listaElementosQuantidadeDeProdutos[contador].innerHTML = `<b>${listaProdutos[contador].quantidade} un.</b>`;
     
@@ -178,7 +205,7 @@ for(let contador = 0; contador < listaProdutos.length; contador++){
     <td>
             <button class="carrinho__botaoLimparItemCarrinho">Limpar</button>
         </td>`;
-    }
+    };
     
     const listaElementosTabelaPrecoProduto = document.querySelectorAll(".carrinho__tabelaPrecoProduto");
     const listaBotoesLimparQuantidadeItens = document.querySelectorAll(".carrinho__botaoLimparItemCarrinho");
@@ -187,12 +214,16 @@ for(let contador = 0; contador < listaProdutos.length; contador++){
         listaBotoesLimparQuantidadeItens[contador].onclick = function(){
             limparItemCarrinho(contador);
         }
-    }
+    };
 
     for(let contador = 0; contador < listaElementosTotais.length; contador++){
         listaElementosTotais[contador].innerHTML = `<b>${listaTotais[contador]}</b>${formataPreco(0)}`;
-    }
+    };
 
     document.getElementById("carrinho__botaoLimparCarrinho").onclick = function(){
         limparCarrinho();
-    }
+    };
+
+    document.getElementById("carrinho__botaoFinalizarCompra").onclick = function(){
+        finalizarPedido();
+    };

@@ -1,0 +1,6 @@
+#carrinho__confirmacaoPedido{
+    color: var(--color3);
+    text-shadow: 0 0 2px var(--color5);
+    margin-bottom: 2rem;
+    display: none;
+}

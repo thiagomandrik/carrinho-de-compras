@@ -30,6 +30,8 @@
 @import "./carrinho/carrinho-totalAvisoDesconto.css";
 @import "./carrinho/carrinho-totais.css";
 @import "./carrinho/carrinho-botaoLimparCarrinho.css";
+@import "./carrinho/carrinho-botaoFinalizarCompra.css";
+@import "./carrinho/carrinho-confirmacaoPedido.css";
 
 @import "./rodape.css";
 @import "./rodape/rodape-texto.css";

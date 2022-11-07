@@ -1,0 +1,16 @@
+#carrinho__botaoFinalizarCompra{
+    background-color: var(--color9);
+    border-radius: 5px;
+    border-style: none;
+    color: var(--color2);
+    cursor: pointer;
+    font-weight: bold;
+    height: 2rem;
+    margin-bottom: 2rem;   
+    margin-left: 1rem;
+}
+
+#carrinho__botaoFinalizarCompra:hover{
+    background-color: var(--color10);
+    transition-duration: 0.5s;
+}
