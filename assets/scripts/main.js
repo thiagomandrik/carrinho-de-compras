@@ -112,7 +112,7 @@ function subtraiQuantidade5(indiceProduto){
 function limparItemCarrinho(indiceProduto){
     if(listaProdutos[indiceProduto].quantidade > 0){
         var confirmaLimparItemCarrinho = confirm("Você tem certeza que deseja excluir o item?");
-        if(confirmaLimparItemCarrinho = true){
+        if(confirmaLimparItemCarrinho == true){
             var quantidade = 0;
             listaProdutos[indiceProduto].quantidade = 0;
             atualizaCarrinho(indiceProduto, quantidade);
@@ -128,7 +128,7 @@ function limparItemCarrinho(indiceProduto){
 function limparCarrinho(){
     if(quantidadeTotalProdutos > 0){
         var confirmaLimparCarrinho = confirm("Você tem certeza que deseja limpar o carrinho?");
-        if(confirmaLimparCarrinho = true){
+        if(confirmaLimparCarrinho == true){
             var quantidade = 0;
             for(let contador = 0; contador < listaProdutos.length; contador++){
                 listaProdutos[contador].quantidade = 0;
