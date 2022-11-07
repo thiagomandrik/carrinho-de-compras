@@ -1,9 +1,9 @@
 .cabecalho__titulo{
     color: var(--color5);
-    text-shadow: 0 0 2px var(--color5);
-    text-transform: uppercase;
     font-weight: bold;
     margin-left: 5px;
+    text-shadow: 0 0 2px var(--color5);
+    text-transform: uppercase;
 }
 
 @media screen and (min-width: 0){

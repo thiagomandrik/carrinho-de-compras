@@ -1,8 +1,8 @@
 .carrinho__titulo{
-    text-transform: uppercase;
-    font-weight: bold;
     color: var(--color5);
+    font-weight: bold;
     text-shadow: 0 0 3px var(--color5);
+    text-transform: uppercase;
 }
 
 @media screen and (min-width: 0){

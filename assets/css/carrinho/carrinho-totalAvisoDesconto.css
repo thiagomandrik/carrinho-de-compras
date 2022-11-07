@@ -1,6 +1,6 @@
 .carrinho__totalAvisoDesconto{
-    margin: 2rem;
     color: var(--color3);
-    text-shadow: 0 0 2px var(--color3);
     font-weight: bold;
+    margin: 2rem;
+    text-shadow: 0 0 2px var(--color3);
 }

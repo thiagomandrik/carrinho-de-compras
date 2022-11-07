@@ -5,6 +5,7 @@ var listaProdutos = [
     {"produto":"Telha", "preco":1.98, "taxaIPI":0.08, "quantidade":0, "valorTotalProduto":0, "valorTotalIPI":0, "subtotal":0}
 ];
 
+// Definindo as listas e dicionarios que serao utilizados no totalizador do carrinho
 var totais = {"totalValorProdutos":0, "totalValorIPI":0, "totalDesconto":0, "totalValorPedido":0};
 var quantidadeTotalProdutos
 const listaIndicesTotais = ["totalValorProdutos", "totalValorIPI","totalDesconto", "totalValorPedido"];
@@ -108,17 +109,28 @@ function subtraiQuantidade5(indiceProduto){
 
 //Funcao para limpar um item do carrinho
 function limparItemCarrinho(indiceProduto){
-    var quantidade = 0;
-    listaProdutos[indiceProduto].quantidade = 0;
-    atualizaCarrinho(indiceProduto, quantidade);
+    var confirmaLimparItemCarrinho = confirm("Você tem certeza que deseja excluir o item?");
+    if(confirmaLimparItemCarrinho = true){
+        var quantidade = 0;
+        listaProdutos[indiceProduto].quantidade = 0;
+        atualizaCarrinho(indiceProduto, quantidade);
+    }else{
+        //pass
+    };
 }
+
 //Funcao para limpar todo o carrinho
 function limparCarrinho(){
-    var quantidade = 0;
-    for(let contador = 0; contador < listaProdutos.length; contador++){
-        listaProdutos[contador].quantidade = 0;
-        atualizaCarrinho(contador, quantidade);
-    }
+    var confirmaLimparCarrinho = confirm("Você tem certeza que deseja limpar o carrinho?");
+    if(confirmaLimparCarrinho = true){
+        var quantidade = 0;
+        for(let contador = 0; contador < listaProdutos.length; contador++){
+            listaProdutos[contador].quantidade = 0;
+            atualizaCarrinho(contador, quantidade);
+        };
+    }else{
+        //pass
+    };
 }
 
 //Listas dos elementos da section produtos

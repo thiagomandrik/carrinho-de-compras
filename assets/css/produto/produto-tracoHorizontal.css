@@ -1,6 +1,6 @@
 .produto__tracoHorizontal{
-    width: 80%;
     background-color: var(--color2);
-    padding: 1px;
     border-style: none;
+    padding: 1px;
+    width: 80%;
 }

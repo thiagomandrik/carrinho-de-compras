@@ -4,17 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Importacao da API da fonte utilizada -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+
+    <!-- Importacao do arquivo principal do CSS -->
     <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!-- Definicao do icone da pagina -->
     <link rel="icon" href="./assets/img/favicon.png">
     <title>Materiais de Construção</title>
 </head>
-<body class="cores">
+
+<body class="cores"> <!-- Definicao da classe que contem as cores utilizadas no projeto -->
+    <!-- Definicao da estrutura do cabecalho da pagina -->
     <header class="cabecalho">
         <img class="cabecalho__logo" src="./assets/img/favicon.png" alt="Logo da loja.">
         <p class="cabecalho__titulo">Materiais de Construção</p>
     </header>
+
+    <!-- Inicio da section produtos -->
     <section class="produtos">
+
+        <!-- Produto Tijolo -->
         <div class="produto">
             <div class="produto__circuloImagem">
                 <img class="produto__imagem" src="./assets/img/produto-tijolo.png" alt="Imagem de Tijolo.">
@@ -37,6 +49,7 @@
             </div>
         </div>
 
+        <!-- Produto Cimento -->
         <div class="produto">
             <div class="produto__circuloImagem">
                 <img class="produto__imagem" src="./assets/img/produto-cimento.png" alt="Imagem de Saco de Cimento 50kg.">
@@ -59,6 +72,7 @@
             </div>
         </div>
 
+        <!-- Produto Telha -->
         <div class="produto">
             <div class="produto__circuloImagem">
                 <img class="produto__imagem" src="./assets/img/produto-telha.png" alt="Imagem de Telha Cerâmica.">
@@ -81,13 +95,17 @@
             </div>
         </div>
     </section>
-    
+
+    <!-- Inicio da section do carrinho de compras  -->
     <section class="carrinho">
         <div>
             <h1 class="carrinho__titulo">CARRINHO DE COMPRAS</h1>
             <hr class="carrinho__tracoHorizontal">
         </div>
+        
         <div class="carrinho__conteudo">
+
+            <!-- Definicao da estrutura inicial da tabela de subtotal dos produtos no carrinho -->
             <div class="carrinho__produtosNoCarrinho">
                 <p id="carrinho__produtosNoCarrinho--vazio">Carrinho Vazio!</p>
                 <table id="carrinho__tabela" class="carrinho__tabelaProdutosNoCarrinho">
@@ -102,6 +120,7 @@
                 </table>
             </div>
 
+            <!-- Definicao da estrutura do total das compras no carrinho -->
             <div class="carrinho__total">
                 <p class="carrinho__totalAvisoDesconto">Desconto de 5% em compras a partir de R$ 500,00!</p>
                 <p class="carrinho__totais"></p>
@@ -114,10 +133,12 @@
         </div>
     </section>
     
+    <!-- Definicao da estrutura do rodape da pagina -->
     <footer class="rodape">
         <p class="rodape__texto">Desenvolvido por Thiago Mandrik</p>
     </footer>
 
+    <!-- Importacao do arquivo JS utilizado -->
     <script type="text/javascript" src="./assets/scripts/main.js"></script>
 </body>
 </html>

@@ -1,17 +1,16 @@
 .produtos{
     background-color: var(--color3);
-    padding: 10rem 0 5rem 0;
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: center; */
-    width: 100%;
+    padding: 10rem 0 5rem 0;
     position: relative;
+    width: 100%;
 }
 
 @media screen and (min-width: 0){
     .produtos{
-        flex-direction: column;
         align-items: center;
+        flex-direction: column;
     }
 }
 
